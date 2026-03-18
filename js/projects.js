@@ -94,7 +94,7 @@ const PROJECTS = [
     type: "group",
     module: "Front End Module Project",
     title: "Music Discovery App",
-    image: "images/frontend.png",
+    image: "images/FrontEnd.png",
     imageAlt: "Music Discovery App Screenshot",
     description:
       "A Spotify-inspired React SPA built as a team, integrating real-time Spotify Web API playback. Features a unique circular queue visualizer and a dynamic color scheme that adapts to album art.",
