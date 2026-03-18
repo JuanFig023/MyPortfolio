@@ -1,0 +1,186 @@
+/* ─── Scroll & Layout ─────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ─── Project Card Hover Effect ─────────────────────────────────────────── */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12);
+}
+
+/* ─── Project Card Grid ──────────────────────────────────────────────────── */
+/* Defined here (not in Tailwind) so it applies to dynamically injected cards */
+.project-card-grid {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+.project-card-img  { min-width: 0; align-self: start; }
+.project-card-body { min-width: 0; }
+
+.project-img {
+  height: 24rem;
+  max-height: 24rem;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+@media (max-width: 767px) {
+  .project-card-grid {
+    display: block;
+  }
+}
+
+
+/* ─── Accordion (details / summary) ─────────────────────────────────────── */
+details summary {
+  list-style: none;
+  cursor: pointer;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+details[open] .chevron {
+  transform: rotate(180deg);
+}
+.chevron {
+  transition: transform 0.25s ease;
+  display: inline-block;
+}
+
+/* ─── Hero Fade-Up Animation ─────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-up {
+  animation: fadeUp 0.7s ease both;
+}
+
+/* ─── Tech Stack Tag Colors ──────────────────────────────────────────────── */
+/*
+  Used by js/projects.js via class="tag tag-{color}".
+  Defined here rather than as Tailwind utilities so the Play CDN
+  does not need to scan dynamically injected markup for these classes.
+*/
+.tag {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  display: inline-block;
+  line-height: 1.5;
+}
+
+.tag-blue   { background-color: #dbeafe; color: #1d4ed8; }
+.tag-green  { background-color: #dcfce7; color: #15803d; }
+.tag-orange { background-color: #ffedd5; color: #c2410c; }
+.tag-purple { background-color: #f3e8ff; color: #7e22ce; }
+.tag-red    { background-color: #fee2e2; color: #b91c1c; }
+.tag-yellow { background-color: #fef9c3; color: #a16207; }
+.tag-slate  { background-color: #e2e8f0; color: #475569; }
+
+/* ─── Skills Carousel ────────────────────────────────────────────────────── */
+
+/* Fade edges left and right */
+.carousel-wrapper {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
+  margin-bottom: 1rem;
+}
+
+/* Horizontal flex track — wide enough to hold duplicated items */
+.carousel-track {
+  display: flex;
+  gap: 0.875rem;
+  width: max-content;
+  will-change: transform;
+}
+
+/* Pause all tracks in a wrapper when the wrapper is hovered */
+.carousel-wrapper:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+/* Direction variants */
+.carousel-track.scroll-left {
+  animation: carouselLeft 38s linear infinite;
+}
+
+.carousel-track.scroll-right {
+  animation: carouselRight 44s linear infinite;
+}
+
+@keyframes carouselLeft {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.333%); } /* move one third — one copy width */
+}
+
+@keyframes carouselRight {
+  from { transform: translateX(-33.333%); }
+  to   { transform: translateX(0); }
+}
+
+/* Individual skill pill */
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #1e293b;          /* slate-800 */
+  border: 1px solid #334155;    /* slate-700 */
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  min-width: 88px;
+  color: #cbd5e1;                  /* slate-300 — readable on dark background */
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  cursor: default;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.skill-card:hover {
+  border-color: #7c3aed;        /* violet-600 */
+  transform: translateY(-4px);
+}
+
+.skill-card img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.skill-card span {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #94a3b8;               /* slate-400 */
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}

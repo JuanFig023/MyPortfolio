@@ -1,248 +1,206 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Juan Figueroa | Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Inter', 'sans-serif'] },
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body>
-    <h1>Final Portfolio</h1>
-    <p>
-      Hi! My names Juan Figueroa, this portfolio showcases my work and growth as a software engineer during my apprenticeship at HP Inc. It includes an overview of my experience, detailed descriptions of key projects, and reflections on my learning journey. Each project highlights the skills I developed, the technologies I used, and the impact I made.
-    </p>
-    <h2>Overview of Apprenticeship</h2>
-      <ul>
-        <li><b>Host Company:</b> HP Inc.</li>
-        <li><b>Duration:</b> Jan 2025 – April 2026</li>
-        <li><b>Link to Deployed Portfolio Website:</b> <a href="https://juanfig023.github.io/MyPortfolio" target="_blank">Deployed Portfolio</a></li>
-        <li><b>Who I am:</b> Fast learning software engineer with experience building and maintaining production full stack applications using TypeScript, PHP/Drupal, and modern frontend frameworks.</li>
-        <li><b>Why I do what I do:</b> Motivated by understanding the “why” behind systems, solving real world problems, and continuously growing through challenging, high impact work.</li>
-        <li><b>Areas of Interest:</b> Improving processes, strengthening test coverage, reducing deployment risk, CI/CD improvements, frontend/backend development, security, automation.</li>
-        <li><b>Teams I have worked on:</b> HP's external developers portal (hp.io)</li>
-        <li><b>Impact at HP Inc.:</b> Optimized CI/CD pipelines, delivered production enhancements, designed and implemented backend APIs, shipped frontend features, identified and resolved bugs and security issues.</li>
-      </ul>
-    <h2>Projects</h2>
-    <h3>Inventory Application</h3>
-    <ul>
-      <li><b>Link to repo:</b> <a href="https://github.com/JuanFig023/inventory-app" target="_blank">Inventory App GitHub</a></li>
-      <li><b>Presentation:</b> <a href="https://www.youtube.com/watch?v=MFk8Emz2Ixg" target="_blank">YouTube Demo</a></li>
-            <li><b>Screenshot:</b><br>
-              <img src="images/DJP.png" alt="Inventory App Screenshot" style="max-width:600px;width:100%;border:1px solid #ccc;margin-top:10px;">
-            </li>
-      <li><b>Purpose/Goals:</b> Build a full-stack inventory tracking app for an e-commerce company, demonstrating mastery of three-tier architecture and RESTful CRUD operations.</li>
-      <li><b>Overview of Features:</b>
-        <ul>
-          <li>View all items in inventory (React front-end, Express/Sequelize back-end)</li>
-          <li>View individual item details</li>
-          <li>Add new items via form</li>
-          <li>Edit item details</li>
-          <li>Delete items from inventory</li>
-          <li>Bonus: User and Order models, search, cart, mobile support, admin validation</li>
-        </ul>
-      </li>
-      <li><b>Tech Stack:</b> React.js (Presentation), Express.js (Business Logic), Sequelize (Data), Node.js, SQL</li>
-      <li><b>System Architecture:</b> Three-tiered (Presentation, Business Logic, Data)</li>
-      <li><b>Skills Demonstrated:</b>
-        <ul>
-          <li>Full-stack development (front-end & back-end)</li>
-          <li>RESTful API design</li>
-          <li>Database modeling and CRUD operations</li>
-          <li>Agile teamwork, pair programming, code reviews</li>
-          <li>Version control (Git, branching, PRs)</li>
-          <li>Task management (GitHub Projects)</li>
-          <li>Deployment (Render/other solutions)</li>
-          <li>Unit testing (Jest)</li>
-        </ul>
-      </li>
-      <li><b>Career Relevance:</b> Building a full stack project provides comprehensive understanding of software applications, enhances versatility, and improves collaboration and design skills.</li>
-      <li><b>Reflection:</b> This project brought together all the skills learned over seven weeks, from basic programming to advanced UI and database integration. It was a valuable experience in team development, problem-solving, and applying best practices in software engineering.</li>
-    </ul>
+  <body class="font-sans bg-slate-50 text-slate-900 antialiased">
 
-    <h3>Final Bootcamp Project</h3>
-      <ul>
-        <li><b>Link to repo:</b> <a href="https://github.com/JuanFig023/VacationBookingApp" target="_blank">VacationBookingApp GitHub</a></li>
-        <li><b>Presentation:</b> <a href="https://www.youtube.com/watch?v=OYlJetmZvMQ" target="_blank">YouTube Demo</a></li>
-        <li><b>Screenshot:</b><br>
-          <img src="images/VacationBookingApp.png" alt="VacationBookingApp Screenshot" style="max-width:600px;width:100%;border:1px solid #ccc;margin-top:10px;">
-        </li>
-        <li><b>Overview:</b> VacationBookingApp is a full-stack web application for managing and booking vacation packages. It uses a Laravel back-end API and a React.js front-end, allowing users to browse, add, edit, and book vacation packages. Designed for easy development, testing, and deployment.</li>
-        <li><b>Project Structure:</b>
-          <ul>
-            <li>Back-end: Laravel 12 API server (controllers, models, migrations, factories, seeders, RESTful routes, Pest tests)</li>
-            <li>Front-end: React.js 19 SPA (components, styles, Cypress tests, Vite config)</li>
+  <!-- ─── NAVBAR ─── -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
+      <span class="text-white font-bold text-lg tracking-tight">Juan Figueroa</span>
+      <!-- Desktop links -->
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#about"      class="hover:text-violet-400 transition-colors">About</a>
+        <a href="#experience" class="hover:text-violet-400 transition-colors">Experience</a>
+        <a href="#skills"     class="hover:text-violet-400 transition-colors">Skills</a>
+        <a href="#projects"   class="hover:text-violet-400 transition-colors">Projects</a>
+        <a href="https://github.com/JuanFig023" target="_blank"
+           class="bg-violet-600 hover:bg-violet-700 text-white px-4 py-1.5 rounded-full transition-colors">GitHub ↗</a>
+      </div>
+      <!-- Hamburger (mobile only) -->
+      <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white p-2" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 bg-slate-900/95 px-6 py-4 flex flex-col gap-4 text-sm font-medium text-slate-300">
+      <a href="#about"      class="hover:text-violet-400 transition-colors">About</a>
+      <a href="#experience" class="hover:text-violet-400 transition-colors">Experience</a>
+      <a href="#skills"     class="hover:text-violet-400 transition-colors">Skills</a>
+      <a href="#projects"   class="hover:text-violet-400 transition-colors">Projects</a>
+      <a href="https://github.com/JuanFig023" target="_blank" class="text-violet-400 font-semibold">GitHub ↗</a>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section class="bg-slate-900 pt-28 md:pt-36 pb-16 md:pb-28 px-6 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-violet-900/25 via-slate-900 to-indigo-900/20 pointer-events-none"></div>
+    <div class="absolute -top-48 -right-48 w-[500px] h-[500px] bg-violet-600/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-48 -left-48 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="max-w-6xl mx-auto relative fade-up">
+      <p class="text-violet-400 font-semibold text-xs tracking-widest uppercase mb-5">HP Inc. Apprenticeship Portfolio</p>
+      <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
+        Hi, I&apos;m Juan<br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-indigo-400">Figueroa</span>
+      </h1>
+      <p class="text-slate-300 text-lg md:text-xl max-w-2xl leading-relaxed mb-10">
+        Full-stack software engineer at HP Inc. building and maintaining production applications with
+        TypeScript, React, PHP/Drupal, and Node.js — shipping features used by <strong class="text-white">~40,000 users/month</strong>.
+      </p>
+      <div class="flex flex-wrap gap-4 mb-16">
+        <a href="#projects"   class="bg-violet-600 hover:bg-violet-700 text-white font-semibold px-6 py-3 rounded-full transition-colors">View Projects</a>
+        <a href="#experience" class="border border-slate-600 hover:border-violet-500 text-slate-300 hover:text-white font-semibold px-6 py-3 rounded-full transition-colors">Experience</a>
+      </div>
+      <!-- Stat cards -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-slate-800/70 border border-slate-700 rounded-2xl p-5 text-center">
+          <div class="text-4xl font-extrabold text-violet-400 mb-1">42%</div>
+          <div class="text-slate-400 text-sm">CI/CD Optimization</div>
+        </div>
+        <div class="bg-slate-800/70 border border-slate-700 rounded-2xl p-5 text-center">
+          <div class="text-4xl font-extrabold text-violet-400 mb-1">60%</div>
+          <div class="text-slate-400 text-sm">Test Coverage Reached</div>
+        </div>
+        <div class="bg-slate-800/70 border border-slate-700 rounded-2xl p-5 text-center">
+          <div class="text-4xl font-extrabold text-violet-400 mb-1">40K+</div>
+          <div class="text-slate-400 text-sm">Users Impacted / Month</div>
+        </div>
+        <div class="bg-slate-800/70 border border-slate-700 rounded-2xl p-5 text-center">
+          <div class="text-4xl font-extrabold text-violet-400 mb-1">5+</div>
+          <div class="text-slate-400 text-sm">Full-Stack Projects</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─── -->
+  <section id="about" class="py-12 md:py-20 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-slate-900 mb-2">About Me</h2>
+      <div class="w-12 h-1 bg-violet-600 rounded-full mb-10"></div>
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <p class="text-slate-600 text-lg leading-relaxed mb-5">
+            I&apos;m a fast-learning software engineer completing my apprenticeship at HP Inc., where I&apos;ve built and maintained production full-stack applications impacting tens of thousands of users each month.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-6">
+            I&apos;m motivated by understanding the <em>"why"</em> behind systems, solving real-world problems, and continuously growing through challenging, high-impact work. I care deeply about code quality, test coverage, and reducing deployment risk.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <span class="bg-slate-100 text-slate-700 text-sm font-medium px-3 py-1.5 rounded-full">HP Inc. · Houston, TX</span>
+            <span class="bg-slate-100 text-slate-700 text-sm font-medium px-3 py-1.5 rounded-full">Jan 2025 – Apr 2026</span>
+            <span class="bg-violet-100 text-violet-700 text-sm font-semibold px-3 py-1.5 rounded-full">Open to opportunities</span>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-semibold text-slate-800 text-lg mb-4">Areas of Interest</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 text-slate-600"><span class="text-violet-500 mt-0.5 shrink-0">▸</span>CI/CD improvements and deployment risk reduction</li>
+            <li class="flex items-start gap-3 text-slate-600"><span class="text-violet-500 mt-0.5 shrink-0">▸</span>Test coverage and quality engineering</li>
+            <li class="flex items-start gap-3 text-slate-600"><span class="text-violet-500 mt-0.5 shrink-0">▸</span>Full-stack front-end and back-end development</li>
+            <li class="flex items-start gap-3 text-slate-600"><span class="text-violet-500 mt-0.5 shrink-0">▸</span>Security vulnerabilities and hardening</li>
+            <li class="flex items-start gap-3 text-slate-600"><span class="text-violet-500 mt-0.5 shrink-0">▸</span>Process automation and developer tooling</li>
           </ul>
-        </li>
-        <li><b>Features:</b>
-          <ul>
-            <li>Browse vacation packages (list, details)</li>
-            <li>Add, edit, delete vacation packages (admin)</li>
-            <li>Book vacation packages (user)</li>
-            <li>RESTful API (CRUD operations)</li>
-            <li>Responsive UI with Bootstrap</li>
-            <li>Authentication (Laravel Sanctum)</li>
-            <li>Testing: Pest (PHP), Cypress (JS)</li>
-          </ul>
-        </li>
-        <li><b>Tech Stack:</b> Laravel 12, React.js 19, Bootstrap, Cypress, Pest, Vite, Faker, Sanctum</li>
-        <li><b>Skills Demonstrated:</b>
-          <ul>
-            <li>Full-stack development (front-end & back-end)</li>
-            <li>API design and integration</li>
-            <li>Database modeling and migrations</li>
-            <li>Authentication and security</li>
-            <li>Automated testing (Pest, Cypress)</li>
-            <li>Responsive UI design</li>
-            <li>Deployment and environment configuration</li>
-          </ul>
-        </li>
-          <li><b>Purpose/Goals:</b> Build a full stack vacation booking app that integrates a modern UI, robust API, and secure authentication to manage and book vacation packages.</li>
-          <li><b>Career Relevance:</b> Building a full stack vacation booking app demonstrates proficiency in integrating multiple technologies, managing real-world data, and deploying scalable solutions. It prepares engineers for roles in modern web development and product delivery.</li>
-          <li><b>Reflection:</b> This project was a collaborative effort that deepened my understanding of full-stack development, API integration, and agile teamwork. I learned to balance user experience, security, and maintainability while delivering a robust application.</li>
-      </ul>
-    <h3>Back End Module Project</h3>
-      <ul>
-        <li><b>Link to repo:</b> <a href="https://github.com/FairyOddTeam/The-Wish-Granting-API" target="_blank">Wish Granting API GitHub</a></li>
-        <li><b>Presentation:</b> <a href="https://www.youtube.com/watch?v=psR3YDZe-sY" target="_blank">YouTube Demo</a></li>
-        <li><b>Screenshot:</b><br>
-          <img src="images/wishGrantingApi.png" alt="Wish Granting API Screenshot" style="max-width:600px;width:100%;border:1px solid #ccc;margin-top:10px;">
-        </li>
-        <li><b>Overview:</b> The Wish Granting API is a back-end service that lets users authenticate (Google OAuth 2.0 → JWT or local username/password), create and manage “Wishes” and “Fairies,” and generate humorous genie twists for each wish via Google Gemini. The API exposes RESTful CRUD operations on core resources and implements robust authentication and authorization.</li>
-        <li><b>Project Structure:</b>
-          <ul>
-            <li>Node.js/Express server</li>
-            <li>Passport (Google OAuth 2.0), JWT authentication</li>
-            <li>Sequelize ORM + SQLite database</li>
-            <li>RESTful routes for Wishes, Fairies, Users</li>
-            <li>Authorization middleware, error handling</li>
-            <li>Unit tests (Jest, Supertest)</li>
-          </ul>
-        </li>
-        <li><b>Features:</b>
-          <ul>
-            <li>CRUD operations for Wishes, Fairies, Users</li>
-            <li>User authentication (Google OAuth 2.0, local login, JWT)</li>
-            <li>Password hashing (bcrypt)</li>
-            <li>Authorization: users can only access/edit their own data; admin can access/edit all</li>
-            <li>Associated data: wishes linked to users and fairies</li>
-            <li>Admin super-user role</li>
-            <li>AI-generated genie outcomes (Google Gemini)</li>
-            <li>Helpful error responses and middleware</li>
-            <li>API documentation (OpenAPI, planned)</li>
-            <li>Unit testing (Jest, Supertest)</li>
-          </ul>
-        </li>
-        <li><b>Tech Stack:</b> Node.js, Express.js, Passport (Google OAuth 2.0), JWT, Sequelize ORM, SQLite, bcrypt, Gemini, Jest, Supertest</li>
-        <li><b>Skills Demonstrated:</b>
-          <ul>
-            <li>Back-end API development</li>
-            <li>Authentication and authorization</li>
-            <li>Database modeling and migrations</li>
-            <li>Agile teamwork, pair programming, code reviews</li>
-            <li>Version control (Git, branching, PRs)</li>
-            <li>Task management (GitHub Projects)</li>
-            <li>Deployment (Render/other solutions)</li>
-            <li>Unit testing (Jest, Supertest)</li>
-          </ul>
-        </li>
-          <li><b>Purpose/Goals:</b> Build a secure, scalable back-end API that enables user authentication, wish management, and role-based access, while integrating modern testing and AI features.</li>
-          <li><b>Career Relevance:</b> Developing a back-end API with authentication, authorization, and robust testing is critical for modern software engineering. This project demonstrates skills in security, data modeling, and collaborative development.</li>
-          <li><b>Reflection:</b> This project strengthened my understanding of API design, authentication, and authorization. Working in a team, I learned to implement secure endpoints, integrate external APIs, and deliver maintainable code through testing and code reviews.</li>
-      </ul>
-    <h3>Front End Module Project</h3>
-      <ul>
-        <li><b>Link to repo:</b> <a href="https://github.com/FrontEndProjectMV/music-discovery-app" target="_blank">Music Discovery App GitHub</a></li>
-        <li><b>Screenshot:</b><br>
-          <img src="images/frontend.png" alt="Music Discovery App Screenshot" style="max-width:600px;width:100%;border:1px solid #ccc;margin-top:10px;">
-        </li>
-        <li><b>Overview:</b> Music Discovery App is a modern, interactive front-end web application inspired by Spotify. It allows users to search for music, view playlists, control playback, and visually explore their listening queue with a unique circular interface. Integrates with the Spotify Web API for real-time playback and user data.</li>
-        <li><b>Project Structure:</b>
-          <ul>
-            <li>src/Api/authorize.tsx: Spotify OAuth2 authentication</li>
-            <li>src/Components/MusicPlayer/: albumArt, musicPlayer, playBar, playerControls, queueRing</li>
-            <li>src/Components/Playlist/: playList, playListItem</li>
-            <li>src/Components/MusicSearch.tsx, Navbar.tsx, SearchBar.tsx, SpotifyAPIHandler.tsx</li>
-            <li>src/contexts/: ColorSchemeContext, PlayerContext, PlaylistContext, SearchContext, SpotifyAPIContext</li>
-            <li>src/utils/GradientFinder/</li>
-            <li>App.tsx, main.tsx, public/, package.json, vite.config.ts</li>
-          </ul>
-        </li>
-        <li><b>Features:</b>
-          <ul>
-            <li>Spotify OAuth2 Authentication (PKCE)</li>
-            <li>Now Playing View (track info, album art, playback controls)</li>
-            <li>Circular Queue Ring (visualizes upcoming tracks)</li>
-            <li>Interactive Player Controls (play, pause, skip, seek)</li>
-            <li>Dynamic Color Scheme (UI adapts to album art colors)</li>
-            <li>Music Search (tracks, artists)</li>
-            <li>Responsive Design (MUI, CSS)</li>
-          </ul>
-        </li>
-        <li><b>Tech Stack:</b> React.js 19, TypeScript, JavaScript, CSS, Vite, Material UI (MUI), Chroma.js, Lodash, Spotify Web API</li>
-        <li><b>Skills Demonstrated:</b>
-          <ul>
-            <li>Front-end SPA development</li>
-            <li>API integration and authentication</li>
-            <li>Component-based architecture</li>
-            <li>Global state management (Context API)</li>
-            <li>Responsive UI design</li>
-            <li>Agile teamwork, pair programming, code reviews</li>
-            <li>Version control (Git, branching, PRs)</li>
-            <li>Task management (GitHub Projects)</li>
-            <li>Deployment (Netlify or similar)</li>
-            <li>Unit testing (Jest, React Testing Library)</li>
-          </ul>
-        </li>
-          <li><b>Purpose/Goals:</b> Build a visually engaging, interactive music discovery platform that leverages Spotify’s API and modern UI/UX principles.</li>
-          <li><b>Career Relevance:</b> Developing a complex front-end SPA with real-time API integration and responsive design is highly relevant for modern web engineering roles. It demonstrates skills in user experience, accessibility, and scalable architecture.</li>
-          <li><b>Reflection:</b> This project challenged me to create a seamless, dynamic user interface and manage global state across multiple components. I gained valuable experience in API integration, UI design, and collaborative development.</li>
-      </ul>
-    <h3>Deployment Module Project</h3>
-      <ul>
-        <li><b>Link to repo:</b> <a href="https://github.com/JuanFig023/bookshelf" target="_blank">BookShelf GitHub</a></li>
-        <li><b>Deployed App:</b> <a href="https://bookshelf-frontend-mz1m.onrender.com/" target="_blank">Live BookShelf App</a></li>
-        <li><b>Presentation:</b> <a href="https://www.youtube.com/watch?v=KTjNUda7s-8" target="_blank">YouTube Demo</a></li>
-        <li><b>Screenshot:</b><br>
-          <img src="images/deploymentProject.png" alt="BookShelf Deployment Screenshot" style="max-width:600px;width:100%;border:1px solid #ccc;margin-top:10px;">
-        </li>
-        <li><b>Overview:</b> BookShelf is a modern, full-stack library management system built with React.js, GraphQL, and PostgreSQL. Users can browse books, check out copies, and admins can manage the entire catalog. The app demonstrates deployment, CI/CD, and web security best practices.</li>
-        <li><b>Project Structure:</b>
-          <ul>
-            <li>Frontend: React.js 19.2.0, Vite, Apollo Client, React Router DOM, Tailwind CSS, shadcn/ui, Lucide React</li>
-            <li>Backend: Node.js, Express.js, Apollo Server, Prisma ORM, PostgreSQL, JWT, bcryptjs</li>
-            <li>GraphQL API: Queries and mutations for books, editions, checkouts, users</li>
-            <li>CI/CD: GitHub Actions, deployment to cloud provider</li>
-          </ul>
-        </li>
-        <li><b>Features:</b>
-          <ul>
-            <li>Browse library by category</li>
-            <li>Search for books</li>
-            <li>View book details and editions</li>
-            <li>Checkout system with due date tracking</li>
-            <li>Track active and returned books</li>
-            <li>User authentication and registration</li>
-            <li>Admin panel for book and edition management</li>
-            <li>Inventory tracking</li>
-            <li>Role-based access control</li>
-            <li>Responsive UI and modern design</li>
-          </ul>
-        </li>
-        <li><b>Tech Stack:</b> React.js, Node.js, Express.js, Apollo Server, Apollo Client, Prisma ORM, PostgreSQL, JWT, bcryptjs, Tailwind CSS, shadcn/ui, Lucide React, Vite</li>
-        <li><b>Skills Demonstrated:</b>
-          <ul>
-            <li>Full-stack development (front-end & back-end)</li>
-            <li>API design and integration (GraphQL)</li>
-            <li>Database modeling and migrations</li>
-            <li>Authentication, authorization, and security</li>
-            <li>Agile teamwork, pair programming, code reviews</li>
-            <li>Version control (Git, branching, PRs)</li>
-            <li>Task management (GitHub Projects)</li>
-            <li>Deployment and CI/CD (GitHub Actions, cloud provider)</li>
-          </ul>
-        </li>
-          <li><b>Purpose/Goals:</b> Build a robust, full-stack library management system that demonstrates deployment, CI/CD, and web security best practices, integrating modern UI, GraphQL API, and secure authentication.</li>
-          <li><b>Career Relevance:</b> Deploying a full-stack application with CI/CD, cloud hosting, and secure authentication is essential for modern software engineering roles. This project showcases skills in scalable architecture, DevOps, and real-world product delivery.</li>
-          <li><b>Reflection:</b> This project brought together all the skills learned throughout the apprenticeship, from frontend and backend development to deployment and security. I gained valuable experience in cloud deployment, CI/CD pipelines, and building maintainable, secure applications as part of a collaborative team.</li>
-      </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EXPERIENCE ─── -->
+  <section id="experience" class="py-12 md:py-20 px-6 bg-slate-50">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-slate-900 mb-2">Experience</h2>
+      <div class="w-12 h-1 bg-violet-600 rounded-full mb-10"></div>
+
+      <!-- HP Inc. -->
+      <div class="bg-white rounded-2xl border border-slate-200 p-5 md:p-8 mb-6 shadow-sm">
+        <div class="flex flex-wrap items-start justify-between gap-4 mb-2">
+          <div>
+            <h3 class="text-xl font-bold text-slate-900">Software Developer Apprentice</h3>
+            <p class="text-violet-600 font-semibold mt-0.5">HP Inc.</p>
+            <p class="text-slate-500 text-sm mt-1">Houston, TX &middot; January 2025 &ndash; April 2026</p>
+          </div>
+          <span class="bg-violet-100 text-violet-700 text-xs font-semibold px-3 py-1.5 rounded-full">Apprenticeship</span>
+        </div>
+        <p class="text-slate-500 text-xs font-semibold uppercase tracking-widest mb-5 mt-4">Team: hp.io &mdash; External Developer Portal</p>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3 text-slate-700"><span class="text-violet-500 mt-1 shrink-0">▸</span>Optimized CI/CD pipelines by 42% by refactoring Cypress end-to-end tests and implementing Jest unit tests for frontend components, increasing test coverage to 60% and reducing deployment risk across a global team.</li>
+          <li class="flex items-start gap-3 text-slate-700"><span class="text-violet-500 mt-1 shrink-0">▸</span>Delivered end-to-end production enhancements for hp.io, impacting ~40,000 new users/month through front-end features, backend APIs, automated tests, and security fixes.</li>
+          <li class="flex items-start gap-3 text-slate-700"><span class="text-violet-500 mt-1 shrink-0">▸</span>Designed and implemented decoupled PHP/Drupal backend APIs powering Tech Group home pages, navigation and menu management, URL alias routing, and credential CRUD — unlocking scalable frontend integrations.</li>
+          <li class="flex items-start gap-3 text-slate-700"><span class="text-violet-500 mt-1 shrink-0">▸</span>Shipped decoupled React/TypeScript UI features including responsive pages, URL aliases, and theming to improve UX and streamline frontend integrations.</li>
+          <li class="flex items-start gap-3 text-slate-700"><span class="text-violet-500 mt-1 shrink-0">▸</span>Identified and resolved production security issues including HTML injection vulnerabilities, email validation edge cases, and layout inconsistencies.</li>
+        </ul>
+      </div>
+
+      <!-- USDA -->
+      <div class="bg-white rounded-2xl border border-slate-200 p-5 md:p-8 shadow-sm">
+        <div class="flex flex-wrap items-start justify-between gap-4 mb-2">
+          <div>
+            <h3 class="text-xl font-bold text-slate-900">Data Analyst Intern</h3>
+            <p class="text-violet-600 font-semibold mt-0.5">United States Department of Agriculture (USDA &ndash; ARS)</p>
+            <p class="text-slate-500 text-sm mt-1">Remote &middot; August 2023 &ndash; January 2025</p>
+          </div>
+        </div>
+        <ul class="space-y-3 mt-4">
+          <li class="flex items-start gap-3 text-slate-700"><span class="text-violet-500 mt-1 shrink-0">▸</span>Engineered a SharePoint-to-Power BI reporting workflow that corrected data inconsistencies and improved accuracy and processing efficiency by 50%.</li>
+          <li class="flex items-start gap-3 text-slate-700"><span class="text-violet-500 mt-1 shrink-0">▸</span>Developed clustering models to analyze job and candidate data, generating insights into workforce demand and supply dynamics.</li>
+          <li class="flex items-start gap-3 text-slate-700"><span class="text-violet-500 mt-1 shrink-0">▸</span>Automated mass email operations, compressing a daily 1-hour manual task into near-instant execution.</li>
+          <li class="flex items-start gap-3 text-slate-700"><span class="text-violet-500 mt-1 shrink-0">▸</span>Delivered interactive Power BI dashboards for workforce analytics supporting executive decision-making around funding and hiring initiatives.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ─── -->
+  <section id="skills" class="py-12 md:py-20 px-6 bg-slate-900">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-white mb-2">Skills</h2>
+      <div class="w-12 h-1 bg-violet-600 rounded-full mb-10"></div>
+      <div id="skills-carousel" class="space-y-4"></div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ─── -->
+  <section id="projects" class="py-12 md:py-20 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-slate-900 mb-2">Projects</h2>
+      <div class="w-12 h-1 bg-violet-600 rounded-full mb-10"></div>
+      <div id="projects-grid" class="grid gap-8"></div><!-- /grid -->
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="bg-slate-900 py-14 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <p class="text-white font-bold text-xl mb-1">Juan Figueroa</p>
+      <p class="text-slate-400 text-sm mb-6">Software Engineer &middot; HP Inc. Apprentice &middot; Houston, TX</p>
+      <div class="flex justify-center gap-6 flex-wrap mb-8">
+        <a href="https://github.com/JuanFig023" target="_blank" class="text-slate-400 hover:text-violet-400 font-medium text-sm transition-colors">GitHub ↗</a>
+        <a href="https://juanfig023.github.io/MyPortfolio" target="_blank" class="text-slate-400 hover:text-violet-400 font-medium text-sm transition-colors">Deployed Portfolio ↗</a>
+      </div>
+      <p class="text-slate-600 text-xs">HP Inc. Apprenticeship Portfolio &middot; January 2025 &ndash; April 2026</p>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/skills.js"></script>
+  <script src="js/projects.js"></script>
   </body>
 </html>
