@@ -2,9 +2,7 @@
  * skills.js
  *
  * Single source of truth for the skills carousel.
- * To add / remove a skill: edit ROW_1 or ROW_2 only.
- * Icons are loaded from the Simple Icons CDN (simpleicons.org).
- * Format: https://cdn.simpleicons.org/<slug>/<hex-color-no-hash>
+ 
  */
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
@@ -16,7 +14,7 @@ const ROW_1 = [
   { label: "PHP",         icon: "https://cdn.simpleicons.org/php/777BB4"         },
   { label: "Python",      icon: "https://cdn.simpleicons.org/python/3776AB"      },
   { label: "HTML5",       icon: "https://cdn.simpleicons.org/html5/E34F26"       },
-  { label: "CSS3",        icon: "https://cdn.simpleicons.org/css3/1572B6"        },
+  { label: "CSS3",        icon: "https://cdn.simpleicons.org/css/663399"        },
   { label: "React",       icon: "https://cdn.simpleicons.org/react/61DAFB"       },
   { label: "Tailwind CSS",icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4" },
   { label: "GraphQL",     icon: "https://cdn.simpleicons.org/graphql/E10098"     },

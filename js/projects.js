@@ -5,8 +5,6 @@
  * Render functions build project cards from the data array and inject
  * them into the #projects-grid container at the bottom of this file.
  *
- * To add or update a project: edit the PROJECTS array only.
- * The HTML for every card is generated automatically — no duplication.
  */
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
@@ -22,7 +20,7 @@ const PROJECTS = [
       "A full-stack library management system I designed and built end to end, featuring a GraphQL API, JWT authentication, role-based access control, and a fully automated CI/CD pipeline via GitHub Actions.",
     tags: [
       { label: "TypeScript",     color: "blue"   },
-      { label: "React",          color: "blue"   },
+      { label: "React.js",          color: "blue"   },
       { label: "GraphQL",        color: "green"  },
       { label: "Node.js",        color: "green"  },
       { label: "PostgreSQL",     color: "orange" },
@@ -30,17 +28,11 @@ const PROJECTS = [
       { label: "GitHub Actions", color: "slate"  },
     ],
     links: [
-      { label: "GitHub",     href: "https://github.com/JuanFig023/bookshelf",                 style: "dark"    },
-      { label: "Live App ↗", href: "https://bookshelf-frontend-mz1m.onrender.com/",           style: "primary" },
-      { label: "Demo Video", href: "https://www.youtube.com/watch?v=KTjNUda7s-8",            style: "outline" },
+      { label: "GitHub",     href: "https://github.com/JuanFig023/bookshelf", style: "dark"    },
+      { label: "Live App ↗", href: "https://bookshelf-frontend-mz1m.onrender.com/", style: "primary" },
+      { label: "Demo Video", href: "https://www.youtube.com/watch?v=KTjNUda7s-8", style: "outline" },
     ],
-    contributionHeading: "Key Contributions",
-    contributions: [
-      "Designed and built the entire system independently — database schema, GraphQL API, React UI, and cloud deployment.",
-      "Implemented a GraphQL API with Apollo Server and Prisma enforcing relational integrity and cascading operations for books, editions, users, and checkouts.",
-      "Integrated GitHub Actions CI/CD to automate build, test, and lint workflows for both frontend and backend.",
-      "Secured the app with JWT authentication, bcrypt-hashed passwords, and role-based access control.",
-    ],
+    
     features: [
       "Browse, search, and filter books",
       "Checkout system with due date tracking",
@@ -50,7 +42,7 @@ const PROJECTS = [
       "CI/CD via GitHub Actions",
     ],
     reflection:
-      "This solo project brought together everything I developed throughout the apprenticeship — front end, back end, DevOps, and security. Owning the full implementation from schema design to cloud deployment gave me a deep, end-to-end understanding of how production systems are built and maintained.",
+      "This solo project brought together everything I developed throughout the apprenticeship — front end, back end, DevOps, and security. Owning the full implementation from schema design to deployment gave me a deep, end-to-end understanding of how production systems are built and maintained.",
   },
 
   {
@@ -60,7 +52,7 @@ const PROJECTS = [
     image: "images/wishGrantingApi.png",
     imageAlt: "Wish Granting API Screenshot",
     description:
-      "A RESTful back-end service built with a team, featuring Google OAuth 2.0, JWT authentication, role-based authorization, and AI-generated genie outcomes via Google Gemini. My focus: authentication flows and automated test coverage.",
+      "A RESTful back-end service built with a team, featuring Google OAuth 2.0, JWT authentication, role-based authorization, and AI-generated genie outcomes via Google Gemini.",
     tags: [
       { label: "JavaScript",        color: "yellow" },
       { label: "Node.js",           color: "green"  },
@@ -73,18 +65,13 @@ const PROJECTS = [
       { label: "GitHub",     href: "https://github.com/FairyOddTeam/The-Wish-Granting-API", style: "dark"    },
       { label: "Demo Video", href: "https://www.youtube.com/watch?v=psR3YDZe-sY",           style: "outline" },
     ],
-    contributionHeading: "My Contributions",
-    contributions: [
-      "Collaborated on the design and implementation of the full-stack application with a React frontend and RESTful backend, enabling users to authenticate, create, and manage Wishes and Fairies.",
-      "Contributed automated tests with Jest and Supertest validating CRUD operations, auth flows, and error handling with isolated SQLite databases and mocked external APIs.",
-    ],
     features: [
       "Google OAuth 2.0 + local login",
       "JWT authorization",
       "CRUD for Wishes, Fairies, Users",
       "AI genie outcomes via Gemini",
       "Role-based access control",
-      "Automated unit tests",
+      "Jest unit tests",
     ],
     reflection:
       "This project deepened my understanding of authentication and authorization architecture. Working with a team accelerated my ability to write reliable, testable API endpoints and integrate external services responsibly.",
@@ -99,7 +86,7 @@ const PROJECTS = [
     description:
       "A Spotify-inspired React SPA built as a team, integrating real-time Spotify Web API playback. Features a unique circular queue visualizer and a dynamic color scheme that adapts to album art.",
     tags: [
-      { label: "React 19",        color: "blue"   },
+      { label: "React.js",        color: "blue"   },
       { label: "TypeScript",      color: "blue"   },
       { label: "Material UI",     color: "purple" },
       { label: "Spotify Web API", color: "green"  },
@@ -109,9 +96,6 @@ const PROJECTS = [
     links: [
       { label: "GitHub", href: "https://github.com/FrontEndProjectMV/music-discovery-app", style: "dark" },
     ],
-    contributionHeading: "My Contributions",
-    // TODO: fill in your specific contributions for this project
-    contributions: null,
     features: [
       "Spotify OAuth2 (PKCE)",
       "Real-time playback controls",
@@ -131,10 +115,10 @@ const PROJECTS = [
     image: "images/VacationBookingApp.png",
     imageAlt: "Vacation Booking App Screenshot",
     description:
-      "A full-stack vacation booking application I built independently, combining a Laravel 12 API back end with a React 19 SPA. Includes secure authentication, admin workflows, and end-to-end test coverage with Cypress and Pest.",
+      "A full-stack vacation booking application I built independently, combining a Laravel API back end with a React SPA. Includes secure authentication, admin workflows, and end-to-end test coverage with Cypress and Pest.",
     tags: [
-      { label: "Laravel 12",   color: "red"    },
-      { label: "React 19",     color: "blue"   },
+      { label: "Laravel",   color: "red"    },
+      { label: "React.js",     color: "blue"   },
       { label: "Sanctum Auth", color: "purple" },
       { label: "Cypress",      color: "green"  },
       { label: "Pest",         color: "yellow" },
@@ -144,9 +128,6 @@ const PROJECTS = [
       { label: "GitHub",     href: "https://github.com/JuanFig023/VacationBookingApp",    style: "dark"    },
       { label: "Demo Video", href: "https://www.youtube.com/watch?v=OYlJetmZvMQ",        style: "outline" },
     ],
-    contributionHeading: "Key Contributions",
-    // Solo project — all contributions were independent
-    contributions: null,
     features: [
       "Browse and book vacation packages",
       "Admin CRUD workflows",
@@ -166,9 +147,10 @@ const PROJECTS = [
     image: "images/DJP.png",
     imageAlt: "Inventory App Screenshot",
     description:
-      "A full-stack e-commerce inventory tracking system built as a team, demonstrating three-tier architecture and RESTful CRUD operations across a React front end, Express API, and SQL database.",
+      "A full-stack e-commerce inventory tracking system built as a team, demonstrating three-tier architecture and RESTful CRUD operations across a React front end, Node.js/Express API, and SQL database.",
     tags: [
       { label: "React.js",   color: "blue"   },
+      { label: "Node.js",    color: "green"  },
       { label: "Express.js", color: "green"  },
       { label: "Sequelize",  color: "orange" },
       { label: "SQL",        color: "yellow" },
@@ -178,9 +160,6 @@ const PROJECTS = [
       { label: "GitHub",     href: "https://github.com/JuanFig023/inventory-app",       style: "dark"    },
       { label: "Demo Video", href: "https://www.youtube.com/watch?v=MFk8Emz2Ixg",       style: "outline" },
     ],
-    contributionHeading: "My Contributions",
-    // TODO: fill in your specific contributions for this project
-    contributions: null,
     features: [
       "View and manage inventory items",
       "Add, edit, and delete items",
@@ -221,17 +200,6 @@ function renderBulletList(items) {
   return items
     .map(item => `<li class="flex gap-2"><span class="text-violet-500 shrink-0">&#9656;</span>${item}</li>`)
     .join("\n            ");
-}
-
-function renderContributions({ contributionHeading, contributions }) {
-  if (!contributions) return "";
-  return `
-        <div>
-          <h4 class="font-semibold text-slate-800 mb-2">${contributionHeading}</h4>
-          <ul class="space-y-1.5">
-            ${renderBulletList(contributions)}
-          </ul>
-        </div>`;
 }
 
 function renderFeatures(features) {
@@ -275,7 +243,6 @@ function renderProjectCard(project) {
             ${CHEVRON_SVG}
           </summary>
           <div class="mt-4 pt-4 border-t border-slate-200 space-y-4 text-sm text-slate-600">
-            ${renderContributions(project)}
             ${renderFeatures(project.features)}
             <p>
               <strong class="text-slate-800">Reflection:</strong> ${project.reflection}
